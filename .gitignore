@@ -3,5 +3,5 @@ unimportant/
 free.py
 old_pygames/
 .env
-data.npy
+*.npy
 __pycache__/
