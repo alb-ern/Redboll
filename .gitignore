@@ -1,7 +1,7 @@
-unimportant
-.vscode
+unimportant/
+.vscode/
 free.py
-old_pygames
+old_pygames/
 .env
 data.npy
-__pycache__
+__pycache__/
