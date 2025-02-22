@@ -1,8 +1,7 @@
 import numpy as np
-from numba import jit
 
 
-@jit
+
 def sigma(x):
     return 2/(1+np.e**(x/150))-1
 
@@ -10,7 +9,6 @@ def init(parameter):
     global weigh1, weigh2, weigh3, weigh4, bias1, bias2, bias3, bias4
     weigh1, weigh2, weigh3, weigh4, bias1, bias2, bias3, bias4 = parameter
 
-@jit
 def dottable(inpNormal, weigh1, weigh2, weigh3, weigh4, bias1, bias2, bias3, bias4):
 
     layer1 = np.dot(inpNormal, weigh1)+bias1
@@ -20,7 +18,7 @@ def dottable(inpNormal, weigh1, weigh2, weigh3, weigh4, bias1, bias2, bias3, bia
 
     return layer4
 
-@jit
+
 def inputer(inputs, time, collision):
     inpNormal = np.array([
         sigma(inputs[0]),
