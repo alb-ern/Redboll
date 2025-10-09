@@ -266,25 +266,25 @@ while active:
     #             DISPLAY
 
     if hitbox:
-        window.fill((120, 80, 240))
-        fpssh = cloc.get_fps()
-        pg.draw.rect(window, (200, 200, 200), imagere)
-        pg.draw.rect(window, (0, 255, 0), blob)
-        pg.draw.rect(window, (0, 255, 0), blob_left)
-        pg.draw.rect(window, (0, 255, 0), blob_right)
+        window.fill((120, 80, 240))#type:ignore
+        fpssh = cloc.get_fps()  # type:ignore
+        pg.draw.rect(window, (200, 200, 200), imagere)  # type:ignore
+        pg.draw.rect(window, (0, 255, 0), blob)  # type:ignore
+        pg.draw.rect(window, (0, 255, 0), blob_left)  # type:ignore
+        pg.draw.rect(window, (0, 255, 0), blob_right)  # type:ignore
         for land in lands:
-            pg.draw.rect(window, (0, 0, 255), land)
-        pg.draw.rect(window, (255, 0, 0), enemy)
+            pg.draw.rect(window, (0, 0, 255), land)  # type:ignore
+        pg.draw.rect(window, (255, 0, 0), enemy)  # type:ignore
         enemy_loc = font.render(f"{erel}", True, (200, 200, 200))
-        window.blit(enemy_loc, (20, 40))
+        window.blit(enemy_loc, (20, 40))  # type:ignore
         if hit:
-            window.blit(font.render(("NOOO"), True, (200, 100, 100)), (20, 60))
+            window.blit(font.render(("NOOO"), True, (200, 100, 100)), (20, 60))  # type:ignore
 
         fpsobj = font.render(f"{int(fpssh)}", True, (200, 200, 200))
-        window.blit(fpsobj, (20, 20))
+        window.blit(fpsobj, (20, 20))  # type:ignore
 
         pg.display.flip()
-        cloc.tick(fps)
+        cloc.tick(fps)  # type:ignore
 # endregion
 pg.quit()
 exit()
